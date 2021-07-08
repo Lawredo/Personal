@@ -1,0 +1,280 @@
+/* CSS Stylesheet Bestand */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+input         {display:none;}
+label         {cursor:pointer;display:inline-block;}
+img           {max-width:100%;height:auto;}
+*             {font-family:ubuntu;margin:0;padding:0;text-decoration:none;box-sizing:border-box;}
+html,body     {width:100%;height:100%;}
+
+/*
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+ - Components */
+
+.header {
+  width:100%;height:100%;
+  background:black url(images/hdr.jpg)no-repeat left center fixed;
+  background-size:contain;
+  position:relative;
+  display:flex;flex-flow:column wrap;
+  justify-content:center;align-items:center;
+}
+.header:after {
+  background:rgba(10,100,200,0.7);
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  content:"";
+}
+.first-line {
+  color:white;
+  text-align:center;
+  position:relative;
+  z-index:+1;
+}
+.name {
+  color:white;
+  text-align:center;
+  font-weight:100;
+  letter-spacing:0.3vh;
+  position:relative;
+  z-index:+1;
+  font-size:8vh;
+  padding:5vh 0;
+}
+.navi {
+  display:none;/* Temporary invisible until website is finished */
+}
+.link-myresume,
+.link-contact,
+.readon {
+  color:white;
+  margin:3vh;
+  font-size:2vh;
+  font-weight:500;
+  background:rgba(10,100,200,0.1);
+  padding:2vh;
+  text-transform:uppercase;
+  transition:all 0.4s ease-in-out;
+}
+.link-myresume:hover,
+.link-contact:hover,
+.readon:hover {
+  background:rgba(10,100,200,1);
+}
+.page {
+  width:100%;min-height:100%;
+  display:flex;flex-flow:column wrap;
+  justify-content:center;align-items:center;
+  padding-bottom:10vh;
+}
+.page-title {
+  margin:14vh auto 5vh auto;
+  font-size:6vh;
+  color:rgba(100,100,100,1);
+  font-weight:100;
+  text-align:center;
+  padding:0 2vh;
+}
+.card {
+  max-width:1000px;
+  width:100%;
+  background:rgba(200,200,200,0.1);
+  margin:8vh auto;
+  padding:3vh 0;
+  display:flex;flex-flow:row wrap;
+  justify-content:center;align-items:center;
+}
+.card-image {
+  width:280px;height:280px;
+  background:rgba(10,100,200,1);
+}
+.card-content {
+  max-width:680px;
+  padding:0 2vh;
+}
+.card-title {
+  font-size:4.5vh;
+  padding:2vh 2vh 0vh 2vh;
+  color:rgba(10,100,200,1);
+  font-weight:100;
+}
+.card-date {
+  font-size:3vh;
+  padding:2vh;
+  font-weight:100;
+  color:rgba(200,100,100,1);
+}
+.card-text,
+.page-text {
+  font-size:2.5vh;
+  font-weight:100;
+  padding:0 2vh;
+  line-height:4vh;
+}
+.page-text {
+  padding-bottom:8vh;
+}
+.card-button {
+  background:rgba(10,100,200,1);
+  margin:2vh 4vh 2vh 2vh;
+  color:white;
+  padding:2vh;  
+  display:none; /* Hidden until site is finished */
+}
+.card-content span {
+  background:rgba(100,100,100,0.2);
+  padding:0.3vh 1vh;
+}
+.card-content strong {
+  font-weight:100;
+  color:rgba(100,140,255,1);
+  font-size:2vh;
+  margin:0 1vh;
+  font-style:italic;
+  padding:0 1vh;
+}
+
+.photogrid {
+  display:flex;flex-flow:row wrap;
+  justify-content:center;align-items:center;
+}
+.photo {
+  background:rgba(100,100,100,0.1);
+  width:320px;height:320px;
+  margin:1vh;
+}
+
+
+/*
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+### >>>> ### ////\\\\ ### >>>> ### ////\\\\ ###
+ - Specific settings / Variance */
+
+
+
+
+.page:nth-of-type(1) {
+  background:rgba(200,200,250,0.1);
+}
+.page:nth-of-type(1) .card .card-image {
+  order:2;
+}
+.page:nth-of-type(2) {
+  background:white;
+}
+.page:nth-of-type(2) .card .card-image {
+  border-radius:6vh;
+  height:180px;
+}
+.page:nth-of-type(3) {
+  background:rgba(200,200,200,0.1);
+  display:none;
+}
+
+.page:nth-of-type(1) .card:nth-of-type(1) .card-image {
+  background:url(images/coding.png)no-repeat center;
+  background-size:cover;
+}
+.page:nth-of-type(1) .card:nth-of-type(2) .card-image {
+  background:url(images/bnr-02.jpg)no-repeat center;
+  background-size:cover;
+}
+
+.page:nth-of-type(2) .card:nth-of-type(1) .card-image {
+  background:url(images/jpo.png)no-repeat center;
+  background-size:70%;
+}
+.page:nth-of-type(2) .card:nth-of-type(2) .card-image {
+  background:rgba(0,0,0,0.1) url(images/bnr-01.jpg)no-repeat center;
+  background-size:cover;
+}
+.page:nth-of-type(2) .card:nth-of-type(3) .card-image {
+  background:rgba(0,0,0,0.1) url(images/oenezig+.jpg)no-repeat center;
+  background-size:cover;
+}
+.page:nth-of-type(2) .card:nth-of-type(4) .card-image {
+  background:url(images/friesland.png)no-repeat center;
+  background-size:70%;
+}
+.page:nth-of-type(2) .card:nth-of-type(5) .card-image {
+  background:url(images/irs.gif)no-repeat center;
+  background-size:70%;
+}
+.page:nth-of-type(2) .card:nth-of-type(6) .card-image {
+  background:url(images/barkeeper.jpg)no-repeat 0vh -5vh;
+  background-size:cover;
+}
+.photo:nth-of-type(1) {
+  background:url(images/hdr.jpg)no-repeat center;
+  background-size:cover;
+  position:relative;
+}
+.photo:nth-of-type(1):after {
+  position:fixed;
+  content:" ";
+  z-index:+1;
+  width:100%;height:100%;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.9)url(images/hdr.jpg)no-repeat center;
+  background-size:30%;
+  opacity:0; 
+}
+.photo:nth-of-type(2) {
+  background:url(images/photo02.jpg)no-repeat center;
+  background-size:cover;
+  position:relative;
+}
+.photo:nth-of-type(2):after {
+  position:fixed;
+  content:" ";
+  z-index:+1;
+  width:100%;height:100%;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.9)url(images/photo02.jpg)no-repeat center;
+  background-size:30%;
+  opacity:0; 
+}
+.photo:nth-of-type(3) {
+  background:url(images/photo03.jpg)no-repeat center;
+  background-size:cover;
+  position:relative;
+}
+.photo:nth-of-type(3):after {
+  position:fixed;
+  content:" ";
+  z-index:+1;
+  width:100%;height:100%;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.9)url(images/photo03.jpg)no-repeat center;
+  background-size:30%;
+  opacity:0; 
+}
+.photo:nth-of-type(4) {
+  background:url(images/photo04.jpg)no-repeat center;
+  background-size:cover;
+  position:relative;
+}
+.photo:nth-of-type(4):after {
+  position:fixed;
+  content:" ";
+  z-index:+1;
+  width:100%;height:100%;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.9)url(images/photo04.jpg)no-repeat center;
+  background-size:30%;
+  opacity:0; 
+}
+
+
+@media screen and (orientation:portrait) {
+  .page:nth-of-type(1) .card .card-images {
+    order:1;
+  }
+  .page:nth-of-type(1) .card .card-content {
+    order:2;
+  }
+  
+}
